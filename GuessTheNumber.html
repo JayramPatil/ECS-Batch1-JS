@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 50px;
+            margin: 50px;
+            text-align: center;
+        }
+        section{
+            border: 1px solid red;
+            height: 300px;
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            width: 60%;
+            font-size: 30px;
+            margin: auto;
+        }
+        button{
+            width: 250px;
+            font-size: 25px;
+            margin: auto;
+        }
+        div{
+            height: 150px;
+        }
+        .result{
+            background-color: yellow;
+            font-size: 35px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guess The Number</h1>
+    </header>
+    <section id="parent">
+        <input id="userNumber" type="number">
+        <button id="btn">Check</button>
+        <div id="result"></div>
+    </section>
+
+    <script src="GuessTheNumber.js"></script>
+</body>
+</html>

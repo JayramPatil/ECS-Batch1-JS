@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paragraph{
+            color: red;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button id="sub1" class="buttons">Submit</button>
+
+    <script>
+
+        const btn = document.getElementById('sub1')
+
+        btn.addEventListener('click', cratePara)
+
+        function cratePara(){
+
+            const para = document.createElement('p');
+
+            const text = document.createTextNode('Hiii This Element Is Dynamically Added by JS');
+
+            para.appendChild(text);
+
+            para.className = "paragraph";
+
+            document.body.appendChild(para);
+        }
+        
+    </script>
+</body>
+</html>

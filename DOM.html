@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        div{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="divisions">
+        <h3>Header 1</h3>
+        <h3>Header 2</h3>
+        <h3>Header 3</h3>
+        <h3>Header 4</h3>
+    </div>
+    <div id="div2" class="divisions">
+        <h3>Header 5</h3>
+        <h3>Header 6</h3>
+        <h3>Header 7</h3>
+        <h3>Header 8</h3>
+    </div>
+
+    <script>
+
+        // 4 H3 => 5H3
+        /*
+            1.  Extract Parent(div1)
+            2.  Create New H3
+            3.  Append Child To Parent
+        */
+
+        let i = document.getElementById('div1');
+        
+        let h3 = document.createElement('h3');
+
+        h3.innerText = "New Header";
+
+        i.appendChild(h3);
+        
+        document.body.appendChild(h3);
+
+        let j = document.getElementsByClassName('divisions')
+
+        console.log(j[0]);
+
+        console.log(i);
+    </script>
+</body>
+</html>
