@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Creating Class Using Function
+
+        function Person(nm,a){
+            this.name = nm;
+            this.age = a
+            this.output = function(){
+                console.log("My Name Is " + this.name + " And Age Is " + this.age);
+            }
+        }
+
+        let person1 = new Person('Jayram', 21);
+        person1.output();
+
+        let person2 = new Person('John', 80);
+        person2.output();
+
+        person1.output();
+
+
+        //Creating Class Using Class Keyword
+
+        class Mobile{
+            constructor(Brand,Model){
+                this.Brand = Brand;
+                this.Model = Model
+            }
+            Info(){
+                console.log("Brand : " + this.Brand + ", Model : " + this.Model);
+            }
+        }
+
+        let mb = new Mobile("Apple","Iphone");
+
+        mb.j = 10;
+        mb.Info();
+
+        //Inheritance
+        class phone{
+            constructor(sim){
+                this.sim = sim;
+            }
+            call(){
+                console.log("Calling Enabled Via " + this.sim);
+            }
+        }
+
+        class SmartPhone extends phone{
+            constructor(card,Memory){
+                super(card);
+                this.Memory = Memory;
+            }
+            camera(){
+                console.log('Image Clicked ' + this.sim + " " + this.Memory);
+                this.call();
+            }
+        }
+
+        let nokia = new phone('Jio');
+        nokia.call();
+
+        let redmi = new SmartPhone('Idea',64);
+        redmi.camera();
+    </script>
+</body>
+</html>
