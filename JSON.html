@@ -8,12 +8,16 @@
 </head>
 <body>
     <script>
-        setTimeout(hii,5000);
-
-        function hii(){
-            alert("Hiii")
+        let obj = {
+            name : "Jayram",
+            company : "ECS"
         }
 
+        let json = JSON.stringify(obj);
+
+        let obj1 = JSON.parse(json);
+
+        console.log(obj1);
     </script>
 </body>
 </html>
